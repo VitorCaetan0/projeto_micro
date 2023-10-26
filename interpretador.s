@@ -36,6 +36,7 @@ END_PUT:
 ldw r4, 0(sp)
 addi sp, sp, 4
 ret
+
 .data /* data follows */
 TEXT_STRING:
 .asciz "\nEntre com o comando:\n> "
