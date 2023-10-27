@@ -48,6 +48,33 @@ ldw r4, 0(sp)
 addi sp, sp, 4
 ret
 
+/* PAGINA LEDS */
+LEDS:
+movia r12,0x10000010
+movia r13,0x1
+
+stwio r13, 0(r12)
+
+ret
+
+/* PAGINA TRIANG */
+TRIANG:
+movia r12,0x10000010
+movia r13,0x2
+stwio r13, 0(r12)
+
+ret
+
+/* PAGINA CRONO */
+CRONO:
+movia r12,0x10000010
+movia r13,0x3
+stwio r13, 0(r12)
+
+ret
+
+
+
 .data /* data follows */
 TEXT_STRING:
 .asciz "\nEntre com o comando:\n> "
